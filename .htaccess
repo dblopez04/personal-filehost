@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [L]
+
+<FilesMatch "^(db\.php|config\.php|\.env)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+DirectoryIndex index.php index.html
+
+Options -Indexes

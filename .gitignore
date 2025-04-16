@@ -1,0 +1,9 @@
+# hosted files
+/files/*
+
+# vscode stuff
+.vscode/
+
+# This shit has my database password come on now
+db.php
+
