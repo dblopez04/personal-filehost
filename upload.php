@@ -1,9 +1,11 @@
 <?php
 
+include 'includes/header.php';
 require 'db.php';
 
 $error = '';
 $success = '';
+
 
 if(!isset($_SESSION['user_id'])) {
     header('Location: login.php');
@@ -38,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])){
                 $mimeType
             ]);
 
-            $success = 'File uploaded successfully! Link: <a href="/' . $urlCode . '">/' . $urlCode . '</a>';
+            $success = 'file uploaded successfully! link: <a href="/filehost/' . $urlCode . '">/' . $urlCode . '</a>';
         }
     }
 
@@ -51,12 +53,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload File</title>
+    <title>upload file</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="form">
-        <h1>Upload File</h1>
+        <h1>upload file</h1>
 
         <?php if (!empty($error)): ?>
             <div class="error"><?php echo $error; ?></div>
@@ -68,8 +70,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])){
 
         <form method="post" action="upload.php" enctype="multipart/form-data">
             <label for="file">choose a file:</label>
-            <input type="file" name="file" id="fil"e" required>
-            
+            <input type="file" name="file" id="file" required>
+            <br><br>
             <button type="submit">upload</button>
         </form>
     </div>
