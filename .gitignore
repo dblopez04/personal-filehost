@@ -3,7 +3,9 @@
 
 # vscode stuff
 .vscode/
+PHPmailer/
 
 # This shit has my database password come on now
 db.php
+mailer.php
 

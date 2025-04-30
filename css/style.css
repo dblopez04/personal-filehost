@@ -10,8 +10,12 @@ body {
     max-width: 500px;
     margin: 0 auto;
     background: #282828;
-    padding: 20px;
     border-radius: 4px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 1px;
 }
 
 .form-item {
@@ -160,8 +164,19 @@ button {
     color: #FFFFFF;
     font-size: 24px;
     cursor: pointer;
-    padding: 0;
-    margin: 0;
     text-decoration: none;
+    
+}
+
+.create-code-button {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0; 
+    margin: 0;
+    font-family: inherit;
     float: left;
 }

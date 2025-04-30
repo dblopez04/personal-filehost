@@ -15,6 +15,7 @@ function checkAdmin(){
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/filehost/css/style.css">
+        <link href="/filehost/includes/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     </head>
 <body>
     <header class="head">

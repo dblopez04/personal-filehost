@@ -74,7 +74,7 @@ $allCodes = $query->fetchAll();
 
     </script>
 <body> 
-<button onclick="createCode()" class="admin-tool-button">create a code</button>
+<button onclick="createCode()" class="create-code-button">create a code</button>
 
 <h1>codes:</h1>
 <?php if (count($allCodes) === 0): ?>
@@ -87,6 +87,10 @@ $allCodes = $query->fetchAll();
                     <?php echo htmlspecialchars($code['code']); ?>
                     <?php echo htmlspecialchars($code['created_at']); ?>
                     <?php echo htmlspecialchars($code['used']); ?>
+                    <form method="POST" action="delete_code.php" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this invite code?');">
+                                <input type="hidden" name="id" value="<?php echo sanitizeInput($code['id']); ?>">
+                                <button type="submit" class="link-button">Delete</button>
+                            </form>
                 </div>
             </div>
         <?php endforeach; ?>

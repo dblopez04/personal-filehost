@@ -25,7 +25,7 @@ if(!($_SESSION['admin'])){
 <body>
     <h1>admin tools</h1>
     <a href="manage_codes.php" class="admin-tool-button">manage invite keys</a><br>
-    <a href="" class="admin-tool-button">create an invite key</a><br>
-    <a href="" class="admin-tool-button">delete file</a><br>
+    <a href="view_users.php" class="admin-tool-button">view users</a><br>
+    <a href="delete_file.php" class="admin-tool-button">delete file</a><br>
 </body>
 </html>
